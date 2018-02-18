@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         //check if uuid exists in userdefaults and navigate or stay accordingly
-        
+        emailTextfield.text = ""
+        passwordTextfield.text = ""
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,6 +50,7 @@ class LoginViewController: UIViewController {
                 else{
                     let uuid = user?.uid
                     UserDefaults.standard.set(uuid, forKey: "uuid")
+                    
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "loginSuccessfull", sender: nil)
                     }

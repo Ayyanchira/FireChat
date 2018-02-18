@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730DA9192039FE36003D2E69 /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DA9182039FE36003D2E69 /* ContactsTableViewCell.swift */; };
+		730DA91B203A002C003D2E69 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DA91A203A002C003D2E69 /* ChatViewController.swift */; };
+		730DA91D203A01AD003D2E69 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DA91C203A01AD003D2E69 /* ContactsViewController.swift */; };
+		730DA91F203A032F003D2E69 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730DA91E203A032F003D2E69 /* Profile.swift */; };
 		735AC18F2039059F002FF0D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AC18E2039059F002FF0D3 /* AppDelegate.swift */; };
-		735AC1912039059F002FF0D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AC1902039059F002FF0D3 /* ViewController.swift */; };
 		735AC1942039059F002FF0D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735AC1922039059F002FF0D3 /* Main.storyboard */; };
 		735AC1962039059F002FF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735AC1952039059F002FF0D3 /* Assets.xcassets */; };
 		735AC1992039059F002FF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735AC1972039059F002FF0D3 /* LaunchScreen.storyboard */; };
 		735AC1A120391BE1002FF0D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 735AC1A020391BE1002FF0D3 /* GoogleService-Info.plist */; };
 		735AC1A320392285002FF0D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AC1A220392285002FF0D3 /* LoginViewController.swift */; };
 		735AC1A520392715002FF0D3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AC1A420392715002FF0D3 /* NewAccountViewController.swift */; };
+		735AC1A820392DA0002FF0D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AC1A720392DA0002FF0D3 /* HomeViewController.swift */; };
 		F712193DF945A239948386EF /* Pods_FireChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2097058220AB22B5140FC2 /* Pods_FireChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,9 +26,12 @@
 		237FD3DFCE7D782E68761B93 /* Pods-FireChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireChat/Pods-FireChat.debug.xcconfig"; sourceTree = "<group>"; };
 		2D2097058220AB22B5140FC2 /* Pods_FireChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		659938A78491169FD415FBE1 /* Pods-FireChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireChat/Pods-FireChat.release.xcconfig"; sourceTree = "<group>"; };
+		730DA9182039FE36003D2E69 /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		730DA91A203A002C003D2E69 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		730DA91C203A01AD003D2E69 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		730DA91E203A032F003D2E69 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		735AC18B2039059F002FF0D3 /* FireChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		735AC18E2039059F002FF0D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		735AC1902039059F002FF0D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		735AC1932039059F002FF0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		735AC1952039059F002FF0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		735AC1982039059F002FF0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +39,7 @@
 		735AC1A020391BE1002FF0D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		735AC1A220392285002FF0D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		735AC1A420392715002FF0D3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
+		735AC1A720392DA0002FF0D3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,17 +83,29 @@
 		735AC18D2039059F002FF0D3 /* FireChat */ = {
 			isa = PBXGroup;
 			children = (
-				735AC1A020391BE1002FF0D3 /* GoogleService-Info.plist */,
-				735AC18E2039059F002FF0D3 /* AppDelegate.swift */,
-				735AC1902039059F002FF0D3 /* ViewController.swift */,
+				735AC1A620392B3F002FF0D3 /* Supporting Files */,
 				735AC1922039059F002FF0D3 /* Main.storyboard */,
-				735AC1952039059F002FF0D3 /* Assets.xcassets */,
-				735AC1972039059F002FF0D3 /* LaunchScreen.storyboard */,
-				735AC19A2039059F002FF0D3 /* Info.plist */,
 				735AC1A220392285002FF0D3 /* LoginViewController.swift */,
 				735AC1A420392715002FF0D3 /* NewAccountViewController.swift */,
+				735AC19A2039059F002FF0D3 /* Info.plist */,
+				735AC1A720392DA0002FF0D3 /* HomeViewController.swift */,
+				730DA9182039FE36003D2E69 /* ContactsTableViewCell.swift */,
+				730DA91A203A002C003D2E69 /* ChatViewController.swift */,
+				730DA91C203A01AD003D2E69 /* ContactsViewController.swift */,
+				730DA91E203A032F003D2E69 /* Profile.swift */,
 			);
 			path = FireChat;
+			sourceTree = "<group>";
+		};
+		735AC1A620392B3F002FF0D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				735AC1952039059F002FF0D3 /* Assets.xcassets */,
+				735AC1972039059F002FF0D3 /* LaunchScreen.storyboard */,
+				735AC1A020391BE1002FF0D3 /* GoogleService-Info.plist */,
+				735AC18E2039059F002FF0D3 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		EED479332E1AF1158AD3D7C3 /* Pods */ = {
@@ -233,8 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735AC1A820392DA0002FF0D3 /* HomeViewController.swift in Sources */,
+				730DA91F203A032F003D2E69 /* Profile.swift in Sources */,
+				730DA91D203A01AD003D2E69 /* ContactsViewController.swift in Sources */,
 				735AC1A320392285002FF0D3 /* LoginViewController.swift in Sources */,
-				735AC1912039059F002FF0D3 /* ViewController.swift in Sources */,
+				730DA9192039FE36003D2E69 /* ContactsTableViewCell.swift in Sources */,
+				730DA91B203A002C003D2E69 /* ChatViewController.swift in Sources */,
 				735AC18F2039059F002FF0D3 /* AppDelegate.swift in Sources */,
 				735AC1A520392715002FF0D3 /* NewAccountViewController.swift in Sources */,
 			);

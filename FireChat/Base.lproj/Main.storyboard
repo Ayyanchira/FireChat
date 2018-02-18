@@ -10,36 +10,108 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Chats-->
+        <scene sceneID="rB9-Lg-LzT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="LV0-dz-Aac" customClass="HomeViewController" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QD3-qA-su2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lK-Vo-4n9">
-                                <rect key="frame" x="146" y="318" width="82" height="30"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cun-xR-1tg">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to Chats"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="81" id="Acm-bh-IrF">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Acm-bh-IrF" id="h8a-zQ-8Yd" customClass="ContactsTableViewCell" customModule="FireChat" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="80.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="James" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kII-mW-uha">
+                                                    <rect key="frame" x="15" y="30" width="50" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BBY-LP-ePp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chats" id="u5m-DH-KRt">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="Hvg-fH-Fwk">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="LV0-dz-Aac" id="XdD-Od-5Vo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rxd-Ei-NnI">
+                            <connections>
+                                <segue destination="8Xa-F7-QXh" kind="show" identifier="AddContact" id="kZJ-m0-6fI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="friendsTableView" destination="Cun-xR-1tg" id="k1C-Xj-pFa"/>
+                        <segue destination="gcq-vL-keV" kind="show" identifier="openChat" id="nAj-Ts-8OH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="983-zy-pw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773.60000000000002" y="141.67916041979012"/>
+        </scene>
+        <!--James-->
+        <scene sceneID="mO8-60-hG5">
+            <objects>
+                <viewController id="gcq-vL-keV" customClass="ChatViewController" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5A9-cV-zj6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iBv-F9-AZR">
+                                <rect key="frame" x="16" y="85" width="343" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
-                                    <segue destination="8Xa-F7-QXh" kind="show" id="r4I-v4-3dw"/>
+                                    <outlet property="delegate" destination="gcq-vL-keV" id="0ia-mY-T4K"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gns-7e-KcE">
+                                <rect key="frame" x="16" y="434" width="343" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.5086434381490863" green="0.96507680376927207" blue="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clearButtonPressed:" destination="gcq-vL-keV" eventType="touchUpInside" id="ILG-MZ-Eqp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QiW-sb-g6G"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aK3-YF-vie"/>
+                    <navigationItem key="navigationItem" title="James" id="LzD-ry-MYq"/>
+                    <connections>
+                        <outlet property="chatTextView" destination="iBv-F9-AZR" id="XB7-GY-hKY"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxj-pa-JDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="142"/>
+            <point key="canvasLocation" x="1757.5999999999999" y="141.67916041979012"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends-->
         <scene sceneID="cKl-ak-QnW">
             <objects>
-                <viewController id="8Xa-F7-QXh" sceneMemberID="viewController">
+                <viewController id="8Xa-F7-QXh" customClass="ContactsViewController" customModule="FireChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="77w-qd-CgC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,15 +130,23 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Xa-F7-QXh" id="8uL-OR-R0d"/>
+                                    <outlet property="delegate" destination="8Xa-F7-QXh" id="48s-NP-dvs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Bkv-iL-HPv"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Friends" id="g0p-ea-DXE"/>
+                    <connections>
+                        <outlet property="contactsTable" destination="e28-7T-Pc6" id="loN-vq-WS1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkF-HX-ThF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357.5999999999999" y="141.67916041979012"/>
+            <point key="canvasLocation" x="774" y="1048"/>
         </scene>
         <!--New Account View Controller-->
         <scene sceneID="zb2-oD-0jC">
@@ -133,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crD-1T-VwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1290.4000000000001" y="-584.25787106446785"/>
+            <point key="canvasLocation" x="-1290" y="1048"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="lYi-RS-6CE">
@@ -148,14 +228,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7i-pT-cpD">
                                 <rect key="frame" x="80" y="318" width="214" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZP-hh-R7E">
                                 <rect key="frame" x="168" y="356" width="38" height="30"/>
@@ -180,7 +260,7 @@
                     <connections>
                         <outlet property="emailTextfield" destination="T5m-G2-fEh" id="vAO-TP-0dk"/>
                         <outlet property="passwordTextfield" destination="b7i-pT-cpD" id="8LV-Zx-o37"/>
-                        <segue destination="mUz-38-XfK" kind="show" identifier="loginSuccessfull" id="3vS-oi-Mpa"/>
+                        <segue destination="MH8-6h-7Cd" kind="show" identifier="loginSuccessfull" id="FaF-x8-sRA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xpr-4g-MjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -188,22 +268,22 @@
             <point key="canvasLocation" x="-1289" y="142"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="OMI-sk-0cZ">
+        <scene sceneID="lnv-DE-Vy2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mUz-38-XfK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MH8-6h-7Cd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JLr-Bu-1pA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tzD-pC-3RN">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PWw-pA-bYb"/>
+                        <segue destination="LV0-dz-Aac" kind="relationship" relationship="rootViewController" id="c7g-EU-cwu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iR5-oJ-GCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUL-c3-twa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-406" y="142"/>
+            <point key="canvasLocation" x="-298" y="142"/>
         </scene>
     </scenes>
 </document>

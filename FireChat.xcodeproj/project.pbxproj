@@ -89,10 +89,8 @@
 				735AC1A420392715002FF0D3 /* NewAccountViewController.swift */,
 				735AC19A2039059F002FF0D3 /* Info.plist */,
 				735AC1A720392DA0002FF0D3 /* HomeViewController.swift */,
-				730DA9182039FE36003D2E69 /* ContactsTableViewCell.swift */,
 				730DA91A203A002C003D2E69 /* ChatViewController.swift */,
 				730DA91C203A01AD003D2E69 /* ContactsViewController.swift */,
-				730DA91E203A032F003D2E69 /* Profile.swift */,
 			);
 			path = FireChat;
 			sourceTree = "<group>";
@@ -100,6 +98,8 @@
 		735AC1A620392B3F002FF0D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				730DA9182039FE36003D2E69 /* ContactsTableViewCell.swift */,
+				730DA91E203A032F003D2E69 /* Profile.swift */,
 				735AC1952039059F002FF0D3 /* Assets.xcassets */,
 				735AC1972039059F002FF0D3 /* LaunchScreen.storyboard */,
 				735AC1A020391BE1002FF0D3 /* GoogleService-Info.plist */,

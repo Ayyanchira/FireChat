@@ -13,6 +13,8 @@
 		735AC1962039059F002FF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 735AC1952039059F002FF0D3 /* Assets.xcassets */; };
 		735AC1992039059F002FF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 735AC1972039059F002FF0D3 /* LaunchScreen.storyboard */; };
 		735AC1A120391BE1002FF0D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 735AC1A020391BE1002FF0D3 /* GoogleService-Info.plist */; };
+		735AC1A320392285002FF0D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AC1A220392285002FF0D3 /* LoginViewController.swift */; };
+		735AC1A520392715002FF0D3 /* NewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735AC1A420392715002FF0D3 /* NewAccountViewController.swift */; };
 		F712193DF945A239948386EF /* Pods_FireChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2097058220AB22B5140FC2 /* Pods_FireChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		735AC1982039059F002FF0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		735AC19A2039059F002FF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		735AC1A020391BE1002FF0D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		735AC1A220392285002FF0D3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		735AC1A420392715002FF0D3 /* NewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 				735AC1952039059F002FF0D3 /* Assets.xcassets */,
 				735AC1972039059F002FF0D3 /* LaunchScreen.storyboard */,
 				735AC19A2039059F002FF0D3 /* Info.plist */,
+				735AC1A220392285002FF0D3 /* LoginViewController.swift */,
+				735AC1A420392715002FF0D3 /* NewAccountViewController.swift */,
 			);
 			path = FireChat;
 			sourceTree = "<group>";
@@ -170,12 +176,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FireChat/Pods-FireChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,8 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735AC1A320392285002FF0D3 /* LoginViewController.swift in Sources */,
 				735AC1912039059F002FF0D3 /* ViewController.swift in Sources */,
 				735AC18F2039059F002FF0D3 /* AppDelegate.swift in Sources */,
+				735AC1A520392715002FF0D3 /* NewAccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

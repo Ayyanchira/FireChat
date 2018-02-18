@@ -4,7 +4,10 @@
 target 'FireChat' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-	pod 'Firebase/Core'
+	
   # Pods for FireChat
-
+	pod 'Firebase/Core'
+	pod 'Firebase/Database'
+  	pod 'Firebase/Auth'
+  	pod 'Firebase/Storage'
 end
